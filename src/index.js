@@ -3,23 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-<<<<<<< HEAD
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-=======
 import { Provider } from "mobx-react";
 import RootStore from "./stores/RootStore";
+import { BrowserRouter } from "react-router-dom";
 
 const root = new RootStore();
 
 ReactDOM.render(
   <Provider {...root}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>,
->>>>>>> eb863cd982023026f8707769e4c0e0d3e8752eaf
   document.getElementById("root")
 );
 

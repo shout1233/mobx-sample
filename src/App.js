@@ -1,13 +1,13 @@
 import React from "react";
-import Counter from "./components/Counter";
-import SuperMarket from "./components/SuperMarket";
+import Grid from "./components/Grid";
+import { Route } from "react-router-dom";
+import NotGrid from "./components/NotGrid";
 
 function App() {
   return (
     <div>
-      <Counter />
-      <hr />
-      <SuperMarket />
+      <Route path="/" exact component={Grid} />
+      <Route path="/supermarket" exact component={NotGrid} />
     </div>
   );
 }
